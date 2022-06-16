@@ -70,6 +70,7 @@ Other Stack features Used to build this app: CSS, HTML, JavaScripts, React
 ## Improvements:
 
 Future Improvements to add in the ATM App
+* fetch images from strapi
 * Add Express code
 * look and style improvements
 * restock functionality to fix for a single product
