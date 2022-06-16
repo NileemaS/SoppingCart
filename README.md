@@ -17,9 +17,11 @@ Added features:
 Other Stack features Used to build this app: CSS, HTML, JavaScripts, React
 </p>
 <br/>
-Simple React Shopping Cart
+
 <img src="./SSScart.jpg" width="500"/>
 <br/>
+
+
 ## Table of Contents 
 
 * [Installation](#installation)
