@@ -118,12 +118,11 @@ const Products = (props) => {
     let item = items.filter((item) => item.name == name);
     if (item[0].instock == 0) return;
     item[0].instock = item[0].instock - 1;
-    console.log(`add to Cart ${JSON.stringify(item)}`);
     setCart([...cart, ...item]);
   };
+  
   const deleteCartItem = (delIndex) => {
     // this is the index in the cart not in the Product List
-
     let newCart = cart.filter((item, i) => delIndex != i);
     let target = cart.filter((item, index) => delIndex == index);
     let newItems = items.map((item, index) => {
@@ -133,11 +132,12 @@ const Products = (props) => {
     setCart(newCart);
     setItems(newItems);
   };
-  const photos = ["apple.png", "orange.png", "beans.png", "cabbage.png"];
-
+  
+  const photos = ["img/apple.png", "img/orange.png", "img/beans.png", "img/cabbage.png"];
   let list = items.map((item, index) => {
-    let n = index + 1049;
-    let uhit = "https://picsum.photos/" + n;
+    //let n = index + 1049;
+    //let uhit = "https://picsum.photos/" + n;
+    //src={uhit} 
     return (
       <li key={index}>
         <div className="card text-center text-dark bg-warning mb-3" 
@@ -147,7 +147,7 @@ const Products = (props) => {
             </div>
             <div className="card-body">                      
                 <p className="card-text">
-                    <Image src={uhit} width={30} roundedCircle></Image>
+                    <Image src={photos[index % 4]} width={50} roundedCircle></Image>
 
                     <Button variant="primary" size="large">
                       {item.name}: ${item.cost} <br/>
